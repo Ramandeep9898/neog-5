@@ -3,24 +3,17 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  var welcomeMessage = "welcome";
+  const [userInput, setUserInput] = useState(" ");
 
-  const [likeCounter, setLikeCounter] = useState(0);
-
-  function likeMeClickHander() {
-    var newLikeCounter = likeCounter + 1;
-    setLikeCounter(newLikeCounter);
+  function onChangeHandler(event) {
+    setUserInput(event.target.value);
   }
 
   return (
     <div className="App">
-      <h1 style={{ backgroundcolor: "blue" }}>
-        {" "}
-        {welcomeMessage}
-        <span style={{ color: "pink" }}>YOOOOO</span>
-        <button onClick={likeMeClickHander}>like me!!</button>
-        {likeCounter}
-      </h1>
+      <h1> Inside out!!</h1>
+      <input onChange={onChangeHandler} />
+      <div>Welcome {userInput}</div>
     </div>
   );
 }
