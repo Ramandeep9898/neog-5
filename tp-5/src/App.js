@@ -1,21 +1,25 @@
 // import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
   var welcomeMessage = "welcome";
-  var likeCounter = 0;
+
+  const [likeCounter, setLikeCounter] = useState(0);
+
   function likeMeClickHander() {
-    // console.log("clicked");
-    likeCounter = likeCounter + 1;
-    console.log(likeCounter);
+    var newLikeCounter = likeCounter + 1;
+    setLikeCounter(newLikeCounter);
   }
+
   return (
     <div className="App">
       <h1 style={{ backgroundcolor: "blue" }}>
         {" "}
         {welcomeMessage}
         <span style={{ color: "pink" }}>YOOOOO</span>
-        <button onClick={likeMeClickHander}>click me!!</button>
+        <button onClick={likeMeClickHander}>like me!!</button>
+        {likeCounter}
       </h1>
     </div>
   );
