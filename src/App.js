@@ -8,7 +8,11 @@ const emojiDictionary = {
   "😎": "Face With Sunglasses",
   "❤": "Love",
   "😢": "Sed",
-  "🎁": "Gift",
+  "🎁": "Gift","🐱‍🐉":"crocodile",
+  "✨": "Bliss",
+  "❤": "Red heart",
+  "👀": "eyes"
+   
 };
 var emojiWeKnow = Object.keys(emojiDictionary);
 
